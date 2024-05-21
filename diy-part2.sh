@@ -34,9 +34,9 @@ git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-app-pus
 # 添加passwall2
 git clone https://github.com/xiaorouji/openwrt-passwall2.git package/luci-app-passwall2
 #加入turboacc
-curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turboacc.sh -o add_turboacc.sh
-chmod -R 777 add_turboacc.sh
-./add_turboacc.sh
+#curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turboacc.sh -o add_turboacc.sh
+#chmod -R 777 add_turboacc.sh
+#./add_turboacc.sh
 
 
 git clone https://github.com/derisamedia/luci-theme-alpha.git package/luci-theme-alpha
@@ -65,12 +65,12 @@ CONFIG_PACKAGE_luci-app-pushbot=y
 CONFIG_PACKAGE_luci-app-passwall2=y
 
 # TurboAcc
-CONFIG_PACKAGE_luci-app-turboacc=y
+#CONFIG_PACKAGE_luci-app-turboacc=y
 
 " >> .config
 
 # 修改默认IP
-sed -i 's/192.168.1.1/10.0.0.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/10.0.3.251/g' package/base-files/files/bin/config_generate
 
 # 修改默认子网掩码
 sed -i 's/255.255.255.0/255.255.252.0/g' package/base-files/files/bin/config_generate
