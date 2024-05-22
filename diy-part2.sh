@@ -25,8 +25,9 @@ function git_sparse_clone() {
 }
 
 # 添加额外插件
-# 添加 design 主题
+# 添加主题
 git clone -b js --single-branch https://github.com/gngpp/luci-theme-design package/luci-theme-design
+git clone https://github.com/derisamedia/luci-theme-alpha.git package/luci-theme-alpha
 # 添加 万能推送
 git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-app-pushbot
 # 添加关机插件
@@ -38,14 +39,10 @@ curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turbo
 chmod -R 777 add_turboacc.sh
 ./add_turboacc.sh
 
-git clone --depth=1 https://github.com/rufengsuixing/luci-app-onliner package/luci-app-onliner
 
 
-git clone https://github.com/derisamedia/luci-theme-alpha.git package/luci-theme-alpha
 
-git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
-git clone --depth=1 https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom package/luci-theme-infinityfreedom
-git_sparse_clone main https://github.com/haiibo/packages luci-theme-atmaterial luci-theme-opentomcat luci-theme-netgear
+
 
 echo "
 # 主题
@@ -59,15 +56,6 @@ CONFIG_PACKAGE_luci-theme-openwrt-2020=y
 
 CONFIG_PACKAGE_luci-theme-alpha=y
 
-CONFIG_PACKAGE_luci-app-argon-config=y
-
-CONFIG_PACKAGE_luci-theme-infinityfreedom=y
-
-CONFIG_PACKAGE_luci-theme-atmaterial=y
-
-CONFIG_PACKAGE_luci-theme-opentomcat=y
-
-CONFIG_PACKAGE_luci-theme-netgear=y
 
 
 
@@ -83,10 +71,6 @@ CONFIG_PACKAGE_luci-app-passwall2=y
 
 # TurboAcc
 CONFIG_PACKAGE_luci-app-turboacc=y
-
-#CONFIG_PACKAGE_luci-app-netdata=y
-
-CONFIG_PACKAGE_luci-app-onliner=y
 
 " >> .config
 
