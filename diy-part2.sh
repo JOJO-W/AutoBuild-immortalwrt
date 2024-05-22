@@ -84,7 +84,7 @@ CONFIG_PACKAGE_luci-app-passwall2=y
 # TurboAcc
 CONFIG_PACKAGE_luci-app-turboacc=y
 
-CONFIG_PACKAGE_luci-app-netdata=y
+#CONFIG_PACKAGE_luci-app-netdata=y
 
 CONFIG_PACKAGE_luci-app-onliner=y
 
