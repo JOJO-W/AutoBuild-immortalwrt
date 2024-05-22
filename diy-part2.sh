@@ -86,6 +86,8 @@ CONFIG_PACKAGE_luci-app-turboacc=y
 
 CONFIG_PACKAGE_luci-app-netdata=y
 
+CONFIG_PACKAGE_luci-app-onliner=y
+
 " >> .config
 
 # 修改默认IP
