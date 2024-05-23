@@ -42,10 +42,6 @@ chmod -R 777 add_turboacc.sh
 ./add_turboacc.sh
 
 
-
-
-
-
 echo "
 # 主题
 CONFIG_PACKAGE_luci-theme-design=y
