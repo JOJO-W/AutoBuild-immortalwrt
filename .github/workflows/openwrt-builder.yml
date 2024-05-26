@@ -10,7 +10,7 @@ on:
         required: false
         default: 'false'
   pull_request_review:
-    types: [edited, dismissed]
+    types: [submitted]
   schedule:
    - cron: 0 1 1/1 * *
 
